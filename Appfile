@@ -1,0 +1,9 @@
+application {
+    name = "otto-mysql-5.6"
+    type = "docker-external"
+}
+
+customization "docker" {
+    image = "mysql:5.6"
+    run_args = "-e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=mysql56 -p 3306:3306"
+}
